@@ -1,0 +1,145 @@
+ion-content {
+  --background: whitesmoke;
+}
+
+ion-item{
+  --background: whitesmoke;
+  --color: #222;
+}
+
+ion-list {
+  margin-top: 50px;
+  --background: whitesmoke !important;
+}
+
+ion-item-sliding{
+  --background: whitesmoke;
+  --color: #222;
+}
+
+ion-input {
+  --color: #111;
+  border: 1px solid #c5c5c5;
+  width: 400px;
+  height: 50px;
+  margin-left: -100px;
+  border-radius: 2px;
+}
+
+ion-button {
+  --background: #222 !important;
+}
+
+.close-month {
+  margin-left: 30px;
+}
+button {
+  width: 50px;
+  height: 50px;
+}
+
+.list-md {
+  border-width: 0px;
+  margin-left: 70px;
+  border-style: none !important;
+  background: whitesmoke !important;
+}
+
+ion-icon.refreshBtn  {
+  width: 50px;
+  height: 50px;
+  color: #222;
+  cursor: pointer;
+  margin-left: 80px;
+}
+
+ion-icon.trashIcon {
+  width: 20px;
+  height: 20px;
+}
+
+ion-icon.addIcon {
+  width: 20px;
+  height: 20px;
+}
+.item-inner {
+  border-style: none !important;
+  border-width: 0px;
+}
+
+.tirarBordar {
+  --border-style: none;
+  margin-bottom: 20px;
+}
+
+div.product-amount {
+  width: 70px;
+  padding: 20px;
+  border: 1px solid #c5c5c5;
+  border-radius: 5px;
+  margin-right: 50px;
+}
+
+div.product-name {
+  padding: 20px;
+  width: 700px;
+  border: 1px solid #c5c5c5;
+  border-radius: 5px;
+}
+
+div.product-price {
+  padding: 20px;
+  width: 150px;
+  border: 1px solid #c5c5c5;
+  border-radius: 5px;
+}
+
+.delete-product {
+  margin-left: 20px;
+}
+
+.deleteBtn {
+  width: 50px;
+  height: 50px;
+  margin-right: 20px
+}
+
+.addBtn {
+  width: 50px;
+  height: 50px;
+}
+
+div.total-earned {
+  position: relative;
+  margin: 0px 0px 0px 150px;
+  width: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: #222;
+  border: 1px solid #c5c5c5;
+
+  h2 {
+    text-align: center;
+    width: 90%;
+    border-bottom: 1px solid #c5c5c5;
+  }
+  p {
+    font-size: 1.3rem;
+  }
+}
+
+.item-inner::after {
+  background: none !important;
+  opacity: 0 !important;
+}
+.sellInput {
+  width: 80px;
+  padding: 20px;
+  border: 1px solid #c5c5c5;
+  border-radius: 5px;
+  margin-right: 50px;
+  margin-left: 20px;
+  background-color: whitesmoke;
+}

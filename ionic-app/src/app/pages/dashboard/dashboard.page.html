@@ -1,0 +1,108 @@
+<ion-content>
+
+
+  <ion-grid>
+
+    <ion-row class="ion-justify-content-end">
+      <ion-col size="3"></ion-col>
+
+      <ion-col size="1"></ion-col>
+
+      <ion-col size="2">
+        <ion-button class="close-month" color="light" routerLink="/money-dashboard">
+          Ver histórico
+        </ion-button>
+      </ion-col>
+
+      <ion-col size="2">
+        <ion-button class="close-month" color="light" (click)="newMonth()">
+          Fechar o mês
+        </ion-button>
+      </ion-col>
+
+      <ion-col size="2">
+        <ion-button color="light" routerLink="/new-product">
+          Adicionar produto
+        </ion-button>
+      </ion-col>
+      <ion-col size="1">
+        <ion-button color="light" (click)="logoutUser()">
+          Logout
+        </ion-button>
+      </ion-col>
+    </ion-row>
+
+    <ion-row style="margin-top: 20px;">
+      <ion-col>
+
+        <ion-icon (click)="refreshPage()" name="refresh-circle" class="refreshBtn"></ion-icon>
+
+      </ion-col>
+      <ion-col style="display: inline-flex;">
+        <form [formGroup]="productSearch" style="display: inline-flex;"novalidate>
+          <ion-input type="text"
+          formControlName="productSearchName"
+          placeholder="Pesquisar"
+          clearInput="true"
+          clearOnEdit="false"></ion-input>
+          <button type="submit" (click)="searchProduct()"><ion-icon name="search-outline"></ion-icon></button>
+        </form>
+      </ion-col>
+      <ion-col>
+        <div class="total-earned">
+          <h2>Ganhos totais</h2>
+
+          <p>R$ {{ ganhosTotais }}</p>
+
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-list>
+          <ion-item-sliding *ngFor="let product of products">
+
+            <ion-item class="tirarBordar">
+
+              <div class="product-amount">
+                {{ product.quantidade }}
+              </div>
+
+              <div class="product-name">
+                {{ product.name }}
+              </div>
+
+              <div class="product-price">
+                {{ product.preco }}
+              </div>
+
+              <div class="sell-product">
+                <form [formGroup]="sellForm" (submit)="sellProduct(product.id, product.quantidade)">
+                  <input type="number"
+                  formControlName="amountToSell"
+                  class="sellInput">
+                </form>
+              </div>
+
+              <div class="delete-product">
+                <form [formGroup]="deleteForm" novalidate>
+                  <input type="hidden" name="id" >
+                  <button class="deleteBtn" (click)="deleteProduct(product.id)" type="submit"><ion-icon class="trashIcon"name="trash-outline"></ion-icon></button>
+                </form>
+              </div>
+
+              <div class="add-product">
+
+                <input type="hidden" name="id" >
+                <button class="deleteBtn" color="light" (click)="addQuantity(product.id)" type="submit"><ion-icon class="addIcon" name="add-outline"></ion-icon></button>
+              </div>
+            </ion-item>
+
+          </ion-item-sliding>
+
+        </ion-list>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>

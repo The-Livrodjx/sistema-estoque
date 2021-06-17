@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title style="text-align: center; display: inline-flex;width: 100%;">Histórico dos Meses</ion-title>
+    <ion-button class="come-back" routerLink="/dashboard">
+      <ion-icon name="arrow-back-outline"></ion-icon>
+    </ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-margin">
+  <ion-grid class="ion-margin">
+    <ion-row>
+
+      <ion-col>Mês</ion-col>
+      <ion-col>Ganho do mês</ion-col>
+      <ion-col>Total de Produtos Vendidos</ion-col>
+      <ion-col>Data do fechamento / Atualizado</ion-col>
+    </ion-row>
+    <ion-row *ngFor="let management of managements">
+
+      <ion-col>{{ management.month }}</ion-col>
+      <ion-col>R$ {{ management.totalGain }}</ion-col>
+      <ion-col>{{ management.totalProductsSelled }}</ion-col>
+      <ion-col>{{ management.updatedAt }}</ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>

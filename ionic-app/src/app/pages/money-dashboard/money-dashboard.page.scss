@@ -1,0 +1,43 @@
+ion-content {
+  --background: whitesmoke;
+}
+
+
+ion-button {
+  --background: whitesmoke !important;
+  --color: whitesmoke !important;
+  width: 75px;
+  height: 45px;
+}
+
+.come-back, .button-solid, .button-native{
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+ion-grid {
+  --ion-grid-column-padding: 10px;
+  border-collapse: collapse;
+  border-style: hidden;
+  min-height: 80vh;
+
+  ion-row:first-child {
+    background-color: whitesmoke;
+    font-weight: bold;
+    color: #222;
+  }
+  ion-col {
+    border: 1px solid #222;
+    border-bottom: 0;
+    border-right: 0;
+    color: #222;
+  }
+  ion-col:last-child {
+    border-right: 1px solid #222;
+  }
+
+  ion-row:last-child {
+    border-bottom: 1px solid #222;
+  }
+}
