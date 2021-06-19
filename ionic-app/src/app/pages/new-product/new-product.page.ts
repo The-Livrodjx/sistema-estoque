@@ -19,6 +19,13 @@ interface productData {
 
 export class NewProductPage implements OnInit {
   public productForm: any;
+  productName = '';
+  productAmount = '';
+  productPrice = '';
+  messageEmail = '';
+  messagePassword = '';
+  errorEmail = false;
+  errorPassword = false;
 
   constructor(
     formBuilder: FormBuilder,

@@ -8,8 +8,11 @@
   "scripts": {
     "build:electron": "ng build --base-href ./",
     "build:electron:dev": "npm run build:electron -- -c dev",
+    "build:electron:prod": "npm run build:electron -- -c production",
     "electron:dev": "export NODE_ENV=development || set NODE_ENV=development && npm-run-all -p ng:serve electron:serve",
     "electron:serve": "wait-on http-get://localhost:4200/ && run-electron . --serve",
+    "electron:windows": "npm run build:electron:prod && npx electron-builder build --windows",
+    "electron:local": "npm run build:electron:prod && run-electron .",
     "ng": "ng",
     "ng:serve": "ng serve",
     "start": "ng serve",
@@ -39,7 +42,7 @@
     "zone.js": "~0.11.4"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "^0.1102.14",
+    "@angular-devkit/build-angular": "~12.0.5",
     "@angular-eslint/builder": "~12.0.0",
     "@angular-eslint/eslint-plugin": "~12.0.0",
     "@angular-eslint/eslint-plugin-template": "~12.0.0",

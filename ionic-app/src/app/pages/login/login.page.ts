@@ -9,6 +9,8 @@ import { FormBuilder, Validators } from '@angular/forms';
 })
 export class LoginPage implements OnInit {
   public loginForm: any;
+  email = '';
+  password = '';
   messageEmail = '';
   messagePassword = '';
   errorEmail = false;
